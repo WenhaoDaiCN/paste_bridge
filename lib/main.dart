@@ -89,7 +89,8 @@ class _MyHomePageState extends State<MyHomePage> {
       if (address.type == InternetAddressType.IPv4) {
         // 计算广播地址
         List<String> parts = address.address.split('.');
-        broadcastAddress = '${parts[0]}.${parts[1]}.${parts[2]}.255';
+        // broadcastAddress = '${parts[0]}.${parts[1]}.${parts[2]}.255';
+        broadcastAddress = '255.255.255.255'; // 广播地址255.255.255.255代表所有设备
         break;
       }
     }
